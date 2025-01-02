@@ -12,6 +12,9 @@ function init() {
 }
 
 function userRoutes() {
+    router.get('/', (req, res) => {
+        res.status(200).json({ message: "API is connected" });
+    });
     router.post(`/signup`, controllers.userSignUp);
     router.post(`/login`, controllers.userLogin);
     router.get('/logout', authMiddleware, controllers.userLogout);
