@@ -13,7 +13,7 @@ function init() {
 
 function userRoutes() {
     router.get('/', (req, res) => {
-        res.status(200).json({ message: "API is connected" });
+        res.status(200).json({ message: "Health check" });
     });
     router.post(`/signup`, controllers.userSignUp);
     router.post(`/login`, controllers.userLogin);
